@@ -17,7 +17,7 @@ import './style/global.css';
 
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="">
       <Routes>
         <Route path="/" element={<ClienteHome />} />
         <Route path="/home-cliente" element={<ClienteHome2 />} />
