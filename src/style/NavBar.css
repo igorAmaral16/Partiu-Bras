@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quicksand:wght@500&display=swap');
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px; /* Mais espaço para um design mais suave */
+  background: linear-gradient(90deg, #fe483c, #a81971); /* Degradê entre laranja avermelhado e roxo escuro */
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px; /* Bordas arredondadas */
+  font-family: 'Quicksand', sans-serif; /* Fonte feminina e profissional */
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.navbar-center {
+  flex: 2;
+  justify-content: center;
+}
+
+.navbar-right {
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: auto;
+  max-height: 50px;
+}
+
+/* Estilo do nome da empresa (logo) */
+.navbar-center .logo-placeholder {
+  font-size: 28px;
+  color: #ffffff; /* Cor branca para o nome da empresa */
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Fonte mais moderna e sofisticada */
+}
+
+/* Estilo do botão de logout */
+.logout-btn {
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #e01a66, #a81971); /* Degradê entre rosa vibrante e roxo escuro */
+  color: white;
+  border: none;
+  border-radius: 25px; /* Bordas arredondadas para o botão */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(90deg, #a81971, #e01a66); /* Degradê invertido para hover */
+}
+
+/* Estilo para o nome do usuário */
+.user-name {
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  padding: 8px;
+  width: 60%;
+  border: 1px solid #a81971;
+  border-radius: 25px; /* Bordas arredondadas */
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+/* Estilos para os links do menu */
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent; /* Remove a cor sólida do fundo */
+  padding: 10px 20px;
+}
+
+.navbar-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links ul li {
+  display: inline;
+}
+
+.navbar-links ul li a {
+  color: #a81971;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links ul li a:hover {
+  color: #fe483c; /* Laranja Avermelhado */
+}
+
+/* Responsividade para o menu hambúrguer */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 15px; /* Ajuste no padding para mobile */
+  }
+
+  .navbar-left ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .hamburger .bar {
+    width: 25px;
+    height: 4px;
+    margin: 5px auto;
+    background-color: #ffffff;
+    border-radius: 2px;
+  }
+
+  .logo-placeholder {
+    display: none;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #a81971;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logout-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+}

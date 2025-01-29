@@ -1,0 +1,138 @@
+/* Contêiner do formulário */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo geral do formulário */
+.create-trip-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #fe483c; /* Laranja Avermelhado */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e01a66; /* Rosa Vibrante */
+}
+
+/* Estilo para as cidades */
+.city-list, .available-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.city-item, .available-cities button {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.city-item {
+  background-color: #e01a66; /* Rosa Vibrante para cidades selecionadas */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+}
+
+.city-item button {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.city-item button:hover {
+  color: #fe483c; /* Laranja Avermelhado */
+}
+
+.available-cities button {
+  background-color: #f4f4f4;
+  color: #333;
+  border-color: #ddd;
+}
+
+.available-cities button:hover {
+  background-color: #fe483c; /* Laranja Avermelhado */
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Mensagens de erro */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Ajuste para o botão de criação */
+button[type="submit"] {
+  background-color: #a81971; /* Roxo Escuro */
+  font-weight: bold;
+  padding: 15px 0;
+  margin-top: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #fe483c; /* Laranja Avermelhado */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .create-trip-form {
+    padding: 10px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+}

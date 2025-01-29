@@ -1,0 +1,175 @@
+.home-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9;
+  padding-bottom: 60px;
+}
+
+/* Filtros */
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fe483c; /* Laranja Avermelhado */
+  color: #fff;
+  border-radius: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.search-container input,
+.additional-filters select,
+.additional-filters input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #a81971; /* Roxo Escuro */
+  font-size: 14px;
+}
+
+/* Responsividade para diferentes tamanhos */
+.search-container input {
+  width: 250px;
+}
+
+.additional-filters select,
+.additional-filters input {
+  width: 180px;
+}
+
+/* Lista de passagens */
+.trips-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Inicia com 2 cards */
+  gap: 20px;
+  padding: 0 20px;
+  overflow-y: auto;
+  max-height: 70vh;
+  transition: grid-template-columns 0.3s ease-in-out; /* Transição suave ao alterar o número de cards */
+}
+
+/* Ajuste para 3 cards */
+.trips-list.three-cards {
+  grid-template-columns: repeat(3, 1fr); /* Alinha 3 cards */
+}
+
+/* Cards de passagem */
+.trip-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #fe483c; /* Laranja Avermelhado */
+  min-height: 220px;
+  overflow: hidden;
+  margin-top: 20px; /* Adicionando margem para descer o card */
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+}
+
+.trip-card h3 {
+  color: #e01a66; /* Rosa Vibrante */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.trip-card p {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.trip-card button {
+  background-color: #e01a66; /* Rosa Vibrante */
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.trip-card button:hover {
+  background-color: #fe483c; /* Laranja Avermelhado */
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #a81971; /* Roxo Escuro */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container input,
+  .additional-filters select,
+  .additional-filters input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .trip-card {
+    padding: 12px;
+  }
+
+  .trip-card h3 {
+    font-size: 14px;
+  }
+
+  .trip-card p {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trips-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta para um card por linha em telas pequenas */
+  }
+
+  .filters-container {
+    padding: 10px;
+  }
+
+  .search-container input,
+  .additional-filters select,
+  .additional-filters input {
+    width: 100%;
+  }
+
+  .trip-card {
+    padding: 10px;
+  }
+
+  .trip-card h3 {
+    font-size: 12px;
+  }
+
+  .trip-card p {
+    font-size: 10px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}

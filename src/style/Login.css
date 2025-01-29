@@ -1,0 +1,145 @@
+/* Overlay que escurece o fundo */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: background-color 0.3s ease;  /* Transição suave para o bloqueio */
+}
+
+.modal-overlay.blocked {
+  pointer-events: none; /* Desabilita interações com a tela */
+}
+
+/* Container do modal */
+.modal-container {
+  background-color: #fff;
+  padding: 30px;
+  width: 400px;
+  border-radius: 15px; /* Aumento do arredondamento para suavizar o visual */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+  position: relative;
+  animation: emerge 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo */
+  justify-content: center;
+}
+
+/* Animação de "emergir" */
+@keyframes emerge {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Botão de fechar (X) fora do modal */
+.close-button {
+  position: absolute;
+  top: 90px;
+  right: 380px; /* Ajuste de posição para ficar mais visível */
+  background-color: transparent;
+  border: none;
+  font-size: 30px; /* Aumento do tamanho do ícone */
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1000; /* Garante que o X esteja acima dos outros elementos */
+}
+
+/* Título do modal */
+.modal-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fe483c; /* Laranja avermelhado para destacar */
+  font-family: 'Poppins', sans-serif;
+  text-align: center; /* Alinha o título ao centro */
+}
+
+/* Descrição do modal */
+.modal-desc {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666;
+  text-align: center; /* Centraliza a descrição */
+  margin-top: 0;
+}
+
+/* Input de email e senha */
+.modal-input input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Arredondamento maior para suavizar */
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.modal-input input:focus {
+  border-color: #fe483c; /* Laranja avermelhado no foco */
+  outline: none;
+}
+
+/* Links Esqueci a senha e Registrar-se */
+.modal-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.forgot-password-link, .register-link {
+  color: #fe483c; /* Laranja avermelhado */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password-link:hover, .register-link:hover {
+  text-decoration: underline;
+}
+
+/* Botão de Login */
+.modal-buttons {
+  display: flex;
+  justify-content: center; /* Centraliza o botão dentro do modal */
+  width: 100%; /* Garante que o container ocupe 100% da largura disponível */
+  margin-top: 20px; /* Espaço acima do botão */
+}
+
+/* Botão de Entrar */
+.modal-submit {
+  padding: 15px 30px; /* Aumento do padding para tornar o botão maior */
+  border: none;
+  background: linear-gradient(to right, #fe483c, #f1c40f); /* Degradê de laranja avermelhado para dourado */
+  color: white;
+  border-radius: 30px; /* Aumento do arredondamento para um visual mais suave */
+  font-size: 18px; /* Aumento do tamanho da fonte para maior destaque */
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%; /* O botão ocupará 100% do espaço dentro do seu contêiner */
+  max-width: 400px; /* Limita a largura máxima para um visual equilibrado */
+}
+
+.modal-submit:hover {
+  background: linear-gradient(to right, #f1c40f, #fe483c); /* Inversão do degradê no hover */
+  transform: scale(1.05); /* Aumento suave no hover */
+}
+
+.modal-submit:active {
+  background-color: #f39c12; /* Cor sólida dourada para o clique */
+  transform: scale(1); /* Retorno ao tamanho original quando clicado */
+}

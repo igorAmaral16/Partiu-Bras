@@ -1,0 +1,185 @@
+/* Container do pagamento */
+.pagamento-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc; /* Borda suave */
+}
+
+/* Cabeçalho de segurança */
+.header-seguranca {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-lock {
+  margin-right: 10px;
+  color: #4CAF50;
+  font-size: 20px;
+}
+
+/* Valor total */
+.valor-total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Resumo do pagamento */
+.resumo-pagamento {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Método de pagamento */
+.metodo-pagamento label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilização dos campos de dados do cartão */
+.dados-cartao input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.dados-cartao input:focus {
+  border-color: #fe483c; /* Laranja Avermelhado para foco */
+  outline: none;
+}
+
+/* Botões de ação */
+.confirmar-btn, .voltar-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 25px;
+}
+
+/* Botão Confirmar */
+.confirmar-btn {
+  background: linear-gradient(135deg, #e01a66, #fe483c, #a81971);
+  border: none;
+}
+
+.confirmar-btn:hover {
+  background: linear-gradient(135deg, #fe483c, #e01a66, #a81971);
+}
+
+/* Botão Voltar */
+.voltar-btn {
+  background-color: #999;
+  border: none;
+}
+
+.voltar-btn:hover {
+  background-color: #7a7a7a;
+}
+
+/* Erro no cartão */
+.erro-cartao {
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pagamento-container {
+      width: 100%;
+      padding: 15px; /* Menos preenchimento para aproveitar melhor o espaço */
+      box-sizing: border-box;
+  }
+
+  .header-seguranca {
+      flex-direction: column; /* Alinha ícone de segurança e texto na vertical */
+      text-align: center;
+  }
+
+  .icon-lock {
+      margin-bottom: 10px; /* Espaçamento entre o ícone e o texto */
+  }
+
+  .valor-total {
+      font-size: 18px;
+      text-align: center;
+  }
+
+  .resumo-pagamento {
+      font-size: 14px;
+      text-align: center;
+  }
+
+  .metodo-pagamento label {
+      font-size: 14px;
+      margin-bottom: 8px; /* Menos margem para otimizar o uso da tela */
+  }
+
+  .dados-cartao input {
+      font-size: 14px;
+      padding: 12px;
+      margin: 8px 0;
+  }
+
+  .confirmar-btn, .voltar-btn {
+      font-size: 16px;
+      padding: 14px;
+      width: 100%; /* Garantir que os botões ocupem 100% da largura */
+  }
+
+  .erro-cartao {
+      font-size: 12px;
+      text-align: center;
+  }
+}
+
+/* Ajuste para telas muito pequenas (exemplo: smartphones menores) */
+@media (max-width: 480px) {
+  .pagamento-container {
+      padding: 10px;
+  }
+
+  .valor-total {
+      font-size: 16px;
+  }
+
+  .metodo-pagamento label {
+      font-size: 12px;
+  }
+
+  .dados-cartao input {
+      font-size: 12px;
+      padding: 10px;
+  }
+
+  .confirmar-btn, .voltar-btn {
+      font-size: 14px;
+      padding: 12px;
+  }
+
+  .erro-cartao {
+      font-size: 10px;
+  }
+}

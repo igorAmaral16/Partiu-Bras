@@ -1,0 +1,17 @@
+.footer {
+  background-color: rgba(254, 72, 60, 0.8); /* Laranja Avermelhado com transparência */
+  color: rgba(236, 240, 241, 0.8); /* Cor do texto suave */
+  text-align: center;
+  padding: 10px 0; /* Mais padding para um footer um pouco mais espaçoso */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 12px; /* Fonte menor para menos destaque */
+  color: #e01a66; /* Rosa Vibrante */
+  opacity: 0.9; /* Sensação de discrição */
+}

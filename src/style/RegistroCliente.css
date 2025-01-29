@@ -1,0 +1,251 @@
+/* Remover rolagem lateral */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede rolagem lateral */
+}
+
+.registro-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Garantir que o conteúdo não saia da tela */
+}
+
+.voltar-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fe483c; /* Laranja avermelhado para contraste */
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.voltar-link:hover {
+    color: #f1c40f; /* Dourado no hover */
+}
+
+.voltar-text {
+    display: flex;
+    align-items: center;
+}
+
+.formulario-container {
+    width: 100%;
+    max-width: 600px; /* Ajuste para refletir a largura maior do formulário */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px; /* Arredondamento suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: emerge 0.4s ease;
+}
+
+/* Animação de "emergir" */
+@keyframes emerge {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+h2 {
+    text-align: center;
+    color: #fe483c; /* Laranja avermelhado para o título */
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Input de email, senha e outros campos */
+.formulario input,
+.formulario textarea,
+.formulario select {
+    width: 95%;
+    padding: 12px; /* Maior padding para facilitar a interação */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Arredondamento suave */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    border-color: #fe483c; /* Laranja avermelhado no foco */
+    outline: none;
+}
+
+/* Botão de registrar */
+.formulario button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #fe483c, #f1c40f); /* Degradê de laranja avermelhado para dourado */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Arredondamento suave */
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.formulario button:hover {
+    background: linear-gradient(to right, #f1c40f, #fe483c); /* Inversão do degradê no hover */
+    transform: scale(1.05); /* Aumento suave no hover */
+}
+
+.formulario button:active {
+    background-color: #f39c12; /* Cor sólida dourada no clique */
+    transform: scale(1); /* Retorno ao tamanho original quando clicado */
+}
+
+/* Mensagens de erro, sucesso e aviso */
+.erro {
+    color: red;
+    margin-bottom: 15px;
+}
+
+.sucesso {
+    color: green;
+    margin-bottom: 15px;
+}
+
+.aviso {
+    color: #e01a66;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Avisos abaixo de campos específicos */
+.aviso-campo {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Container do código de verificação */
+.codigo-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.codigo-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* CEP com botão de busca */
+.cep-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha o botão com o input */
+    margin-bottom: 15px;
+}
+
+.cep-container input {
+    width: 80%;  /* O input ocupa 80% da largura da div */
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.cep-container button {
+    width: 20%;  /* O botão ocupa 20% da largura da div */
+    padding: 6px 12px;  /* Botão menor */
+    font-size: 12px;  /* Fonte pequena para não desproporcional */
+    background-color: #fe483c;
+    color: white;
+    border-radius: 25px; /* Formato oval */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Alinha o texto no centro */
+    margin-top: -17px; /* Ajuste vertical para subir o botão */
+    margin-left: 10px; /* Adiciona espaço entre o input e o botão */
+}
+
+.cep-container button:hover {
+    background-color: #f1c40f;
+}
+
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .registro-container {
+        padding: 15px; /* Reduzir padding nas telas menores */
+    }
+
+    .voltar-link {
+        font-size: 16px; /* Ajuste de fonte */
+        margin-bottom: 15px;
+    }
+
+    .formulario-container {
+        max-width: 90%; /* Maior largura para telas menores */
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px; /* Ajuste de tamanho de fonte */
+        margin-bottom: 15px;
+    }
+
+    .formulario input,
+    .formulario textarea,
+    .formulario select {
+        width: 100%; /* Ajusta a largura para 100% */
+        padding: 12px; /* Aumenta o padding para facilitar o toque */
+        margin-bottom: 12px;
+    }
+
+    .formulario button {
+        padding: 12px; /* Aumenta o padding do botão */
+        font-size: 16px; /* Ajuste do tamanho da fonte */
+    }
+
+    .erro, .sucesso, .aviso {
+        font-size: 14px; /* Reduz o tamanho da fonte para mensagens */
+    }
+}
+
+/* Responsividade para telas muito pequenas (dispositivos móveis) */
+@media (max-width: 480px) {
+    .voltar-link {
+        font-size: 14px; /* Menor fonte */
+    }
+
+    .formulario-container {
+        max-width: 95%; /* Ajusta o formulário para ocupar mais espaço */
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 20px; /* Ajuste do título */
+        margin-bottom: 10px;
+    }
+
+    .formulario input,
+    .formulario textarea,
+    .formulario select {
+        max-width: 90%;
+        padding: 10px;
+        font-size: 14px; /* Tamanho da fonte ajustado */
+    }
+
+    .formulario button {
+        max-width: 96%;
+        font-size: 14px; /* Ajuste do tamanho da fonte do botão */
+        padding: 10px;
+    }
+}

@@ -1,0 +1,75 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    max-width: 400px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .register-form {
+      max-width: 95%; /* Ajusta o tamanho do formulário para telas menores */
+      padding: 15px;
+    }
+  
+    button[type="submit"] {
+      font-size: 14px; /* Ajusta o tamanho da fonte para telas médias */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .register-form {
+      max-width: 95%; /* Ajuste o formulário para ocupar quase toda a tela */
+      padding: 10px;
+    }
+  
+    button[type="submit"] {
+      font-size: 12px; /* Reduz o tamanho da fonte para dispositivos muito pequenos */
+    }
+  }
+  

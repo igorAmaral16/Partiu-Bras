@@ -1,0 +1,102 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #fe483c, #a81971); /* Degradê de laranja avermelhado para roxo escuro */
+  color: white;
+  border-radius: 15px; /* Arredondamento suave */
+}
+
+.logo {
+  font-size: 28px; 
+  font-weight: bold;
+  color: #F1C40F; /* Dourado */
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-login {
+  display: flex;
+  align-items: center;
+}
+
+.search-login input {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 15px; /* Mais arredondado */
+  border: 1px solid #a81971; /* Roxo Escuro */
+}
+
+.search-login .login-btn {
+  padding: 8px 15px;
+  background-color: #F1C40F; /* Dourado */
+  color: white;
+  border: none;
+  border-radius: 15px; /* Mais arredondado */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-login .login-btn:hover {
+  background-color: #a81971; /* Roxo Escuro */
+}
+
+.user-info {
+  position: relative;
+}
+
+.user-name {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #a81971; /* Roxo Escuro */
+  border-radius: 15px; /* Mais arredondado */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px; /* Mais arredondado */
+}
+
+.dropdown-menu button:hover {
+  background-color: #fe483c; /* Laranja Avermelhado */
+}
+
+.login-btn {
+  padding: 10px 20px; /* Tamanho confortável para o botão */
+  background: linear-gradient(to right, #fe483c, #f1c40f); /* Degradê de laranja avermelhado para dourado */
+  color: white;
+  border: none;
+  border-radius: 25px; /* Bordas arredondadas para um toque mais suave */
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif; /* Fonte feminina e profissional */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Efeito suave na transição */
+}
+
+.login-btn:hover {
+  background: linear-gradient(to right, #f1c40f, #fe483c); /* Inversão do degradê no hover */
+  transform: scale(1.05); /* Efeito de aumento suave no hover */
+}
+
+.login-btn:active {
+  background-color: #f39c12; /* Cor sólida dourada para o clique */
+  transform: scale(1); /* Retorno ao tamanho original quando clicado */
+}
+
